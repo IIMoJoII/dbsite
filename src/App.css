@@ -1,38 +1,80 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #272727;
+  width: 100%;
+  height: 100vh;
+}
+
+.Header {
+  height: 60px;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.HeaderText {
+  margin-left: 79px;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #FFFFFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 79px;
+
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+}
+
+.MainList {
+  margin-left: 100px;
+  width: 55%;
+}
+
+.MainList ul{
+  padding: 0;
+  margin-top: 50px;
+}
+
+.MainList ul li{
+  cursor: pointer;
+  width: max-content;
+  margin-top: 25px;
+  list-style-type: none;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #FFFFFF;
+}
+
+.MainList ul .picked {
+  color: #E6E94C;
+}
+
+.TotalInfoText {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #FFFFFF;
+}
+
+.TotalInfoText span {
+  color: #FF5252;
 }
