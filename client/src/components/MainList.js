@@ -24,18 +24,24 @@ function MainList() {
     )
 
     const clickItem = (index) => {
-        const aaa = mainList.map((item) => item.isPicked === true && (item.isPicked = false))
-        console.log(aaa)
-        mainList[index].isPicked = true
-        setMainList(mainList)
+        const newList = [...mainList]
+        newList.forEach(item => item.isPicked = false)
+        newList[index].isPicked = true
+
+        setMainList(newList)
     }
 
     return (
         <div className="MainList">
-            <TotalInfo />
-            <ul>
-                {mainList.map((item, index) => <li key={item.label} className={`${item.isPicked && "picked" }`} onClick={() => clickItem(index)}>{item.label}</li>)}
-            </ul>
+            <div className='list'>
+                <TotalInfo />
+                <ul>
+                    {mainList.map((item, index) => <li key={item.label} className={`${item.isPicked && "picked" }`} onClick={() => clickItem(index)}>{item.label}</li>)}
+                </ul>
+            </div>
+            <div className='result'>
+                {mainList && mainList.map(item => item.isPicked && <div>{item.label}</div>)}
+            </div>
         </div>
     );
 }
